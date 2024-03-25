@@ -7,6 +7,7 @@ export const initSplide = () => {
 	document.addEventListener('DOMContentLoaded', () => {
 		if (investmentSplide) {
 			new Splide(investmentSplide, {
+				role: 'region',
 				type: 'loop',
 				drag: 'free',
 				focus: 'left',
