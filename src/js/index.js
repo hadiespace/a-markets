@@ -1,0 +1,23 @@
+import 'wicg-inert';
+import 'what-input';
+import { testSupportWebp } from './modules/test-support-webp.js';
+import { initHeaderScroll } from './modules/init-header-scroll.js';
+import { initLinkScroll } from './modules/init-link-scroll.js';
+import { defocusButton } from './modules/defocus-button.js';
+import { initHeaderArticle } from './modules/init-header-article.js';
+import { initTimer } from './modules/init-timer.js';
+import { initNavigation } from './modules/init-navigation.js';
+import { initSplide } from './modules/init-splide.js';
+import { initModal } from './modules/init-modal.js';
+import { sendForm } from './modules/send-form.js';
+
+testSupportWebp();
+defocusButton();
+initHeaderScroll();
+initLinkScroll();
+initHeaderArticle();
+initTimer();
+initNavigation();
+initSplide();
+initModal();
+sendForm();

@@ -1,0 +1,13 @@
+extends layout/layout
+
+block const
+	- const isHomePage = true;
+	- const language = "he";
+	- const isRTL = true;
+
+block meta
+	title מִבְחָן
+block content
+	include includes/preview
+	include includes/investment
+block prepend page-bottom

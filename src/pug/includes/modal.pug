@@ -1,0 +1,33 @@
++modal("registration")
+	if isLTR
+		div(class="modal__wrapper")
+			p(class="modal__title") Регистрация
+			form(class="modal__form" data-type="form" novalidate)
+				+fieldName("modal", "registration")
+				+fieldSecondName("modal", "registration")
+				+fieldEmail("modal", "registration")
+				+fieldConsent("modal", "registration")
+				button(class="modal__submit button-modal" type="submit") Отправить
+
+	if isRTL
+		div(class="modal__wrapper")
+			p(class="modal__title") הרשמה
+			form(class="modal__form" data-type="form" novalidate)
+				+fieldName("modal", "registration")
+				+fieldSecondName("modal", "registration")
+				+fieldEmail("modal", "registration")
+				+fieldConsent("modal", "registration")
+				button(class="modal__submit button-modal" type="submit") לִשְׁלוֹחַ
+
++modal("success")
+	if isLTR
+		div(class="modal__wrapper")
+			p(class="modal__success-title") Спасибо, что приняли участие в&nbsp;конкурсе!
+			p(class="modal__success-text") Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время.
+			button(class="modal__success-submit modal-close button-modal" type="button") Отлично
+
+	if isRTL
+		div(class="modal__wrapper")
+			p(class="modal__success-title") תודה שהשתתפת בתחרות!
+			p(class="modal__success-text") אנו נחזור אליך בקרוב.
+			button(class="modal__success-submit modal-close button-modal" type="button") נהדר.

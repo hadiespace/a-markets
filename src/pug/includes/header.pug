@@ -1,0 +1,23 @@
+if isLTR
+	header.header
+		div.header__container.container
+			div.header__logo
+				img(src="img/content/logo.svg" width="86" height="45" alt="A Markets logo")
+			nav.header__navigation.navigation
+				ul.navigation__list
+					li.navigation__item
+						a.navigation__link.current(href="#preview") О&nbsp;конкурсе
+					li.navigation__item
+						a.navigation__link(href="#investment") Инвестиции
+
+if isRTL
+	header.header
+		div.header__container.container
+			div.header__logo
+				img(src="img/content/logo.svg" width="86" height="45" alt="לוגו שווקים")
+			nav.header__navigation.navigation
+				ul.navigation__list
+					li.navigation__item
+						a.navigation__link.current(href="#preview") על התחרות
+					li.navigation__item
+						a.navigation__link(href="#investment") השקעות

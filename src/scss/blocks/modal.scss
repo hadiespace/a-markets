@@ -1,0 +1,99 @@
+.modal {
+	position: fixed;
+	inset: 0;
+	z-index: 50;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	overflow: auto;
+	background-color: var(--color-modal-background);
+	opacity: 0;
+	transition: opacity .3s;
+	pointer-events: none;
+
+	&.open {
+		opacity: 1;
+		pointer-events: visible;
+	}
+}
+
+.modal__content {
+	position: relative;
+	display: grid;
+	padding: 14px 16px 32px;
+	max-width: 375px;
+	background-color: var(--color-alternate);
+}
+
+.modal__close {
+	justify-self: end;
+}
+
+.modal__wrapper {
+	display: grid;
+	margin-top: 9px;
+}
+
+.modal__title {
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 32px;
+	text-align: center;
+}
+
+.modal__form {
+	display: grid;
+	margin-top: 44px;
+}
+
+.modal__field-second-name,
+.modal__field-email {
+	margin-top: 24px;
+}
+
+.modal__field-consent {
+	margin-top: 38px;
+}
+
+.modal__submit {
+	margin-top: 24px;
+}
+
+.modal__success-title {
+	position: relative;
+	padding-top: 140px;
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 32px;
+	text-align: center;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 128px;
+		height: 128px;
+		background-image: url("../img/static/consent-logo.svg");
+		background-size: cover;
+		transform: translateX(-50%);
+	}
+}
+
+.modal__success-text {
+	margin: 8px 0 0;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	color: var(--color-main);
+}
+
+.modal__success-submit {
+	margin-top: 24px;
+}
+
+#modal-success {
+	.modal__close {
+		display: none;
+	}
+}

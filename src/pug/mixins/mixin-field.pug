@@ -1,0 +1,129 @@
+mixin fieldName(parent, id)
+	if isLTR
+		div(
+			class=`${parent}__field-name field field--required`
+			data-error1="Обязательное поле"
+			data-error2="Имя не должно содержать цифры"
+		)
+			label(class="field__label" for=`${id}-name`) Имя*
+			input(
+				class="field__input validate-name required"
+				id=`${id}-name`
+				type="text"
+				name="name"
+				placeholder="Иван"
+			)
+			span(class="field__error")
+
+	if isRTL
+		div(
+			class=`${parent}__field-name field field--required`
+			data-error1="שדה חובה"
+			data-error2="השם לא צריך להכיל מספרים"
+		)
+			label(class="field__label" for=`${id}-name`) שם*
+			input(
+				class="field__input validate-name required"
+				id=`${id}-name`
+				type="text"
+				name="name"
+				placeholder="איוואן."
+			)
+			span(class="field__error")
+
+mixin fieldSecondName(parent, id)
+	if isLTR
+		div(
+			class=`${parent}__field-second-name field field--required`
+			data-error1="Обязательное поле"
+			data-error2="Имя не должно содержать цифры"
+		)
+			label(class="field__label" for=`${id}-second-name`) Фамилия*
+			input(
+				class="field__input validate-name required"
+				id=`${id}-second-name`
+				type="text"
+				name="second-name"
+				placeholder="Иванов"
+			)
+			span(class="field__error")
+
+	if isRTL
+		div(
+			class=`${parent}__field-second-name field field--required`
+			data-error1="שדה חובה"
+			data-error2="השם לא צריך להכיל מספרים"
+		)
+			label(class="field__label" for=`${id}-second-name`) שם משפחה*
+			input(
+				class="field__input validate-name required"
+				id=`${id}-second-name`
+				type="text"
+				name="second-name"
+				placeholder="איבנוב"
+			)
+			span(class="field__error")
+
+mixin fieldEmail(parent, id)
+	if isLTR
+		div(
+			class=`${parent}__field-email field field--required`
+			data-error1="Обязательное поле"
+			data-error2="Некорректный формат"
+		)
+			label(class="field__label" for=`${id}-email`) E-mail*
+			input(
+				class="field__input validate-email required"
+				id=`${id}-email`
+				type="email"
+				name="email"
+				placeholder="unname@example.com"
+			)
+			span(class="field__error")
+
+	if isRTL
+		div(
+			class=`${parent}__field-email field field--required`
+			data-error1="שדה חובה"
+			data-error2="פורמט שגוי"
+		)
+			label(class="field__label" for=`${id}-email`) דואר אלקטרוני*
+			input(
+				class="field__input validate-email required"
+				id=`${id}-email`
+				type="email"
+				name="email"
+				placeholder="unname@example.com"
+			)
+			span(class="field__error")
+
+mixin fieldConsent(parent, id)
+	if isLTR
+		div(
+			class=`${parent}__field-consent field field--consent field--required`
+			data-error1="Необходимо принять условия"
+		)
+			input(
+				class="visually-hidden required"
+				id=`${id}-consent`
+				type="checkbox"
+				name="consent"
+				checked
+			)
+			label(class="field__consent" for=`${id}-consent`) Я&nbsp;прочел и&nbsp;принимаю условия #[a(href="#") Клиентского соглашения], #[a(href="#") Политики конфиденциальности] и&nbsp;#[a(href="#") Политики возврата] денежных средств
+			span(class="field__error")
+
+	if isRTL
+		div(
+			class=`${parent}__field-consent field field--consent field--required`
+			data-error1="יש לקבל את התנאים"
+		)
+			input(
+				class="visually-hidden required"
+				id=`${id}-consent`
+				type="checkbox"
+				name="consent"
+				checked
+			)
+			label(class="field__consent" for=`${id}-consent`) קראתי וקיבלתי את התנאים #[a(href="#") הסכם לקוחות], #[a(href="#") מדיניות פרטיות] и&nbsp;#[a(href="#") מדיניות החזרה] מזומנים
+			span(class="field__error")

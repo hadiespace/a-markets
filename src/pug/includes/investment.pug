@@ -1,0 +1,30 @@
+
+if isLTR
+	section.investment(id="investment" data-type="section")
+		div.investment__container.container
+			h2.investment__heading.heading-2 Инвестируйте в&nbsp;акции популярных компаний
+			div.investment__text
+				p Зарабатывайте на&nbsp;росте и&nbsp;падении, а&nbsp;так&nbsp;же получайте до&nbsp;8.3% годовых в&nbsp;валюте в&nbsp;виде дивидентов
+			div.investment__splide.splide
+				div.investment__track.splide__track
+					ul.investment__list.splide__list(dir="ltr")
+						each stock in DataInvestment.LTR
+							li.investment__slide.splide__slide
+								+stock(stock)
+			button.investment__modal-open.button-accent(type="button" data-modal="modal-registration") Регистрация
+
+if isRTL
+	- const stocks = ['', '', '', '', '', '', '', ''];
+
+	section.investment(id="investment" data-type="section")
+		div.investment__container.container
+			h2.investment__heading.heading-2 השקיעו במניות של חברות פופולריות
+			div.investment__text
+				p הרוויחו מעלייה וירידה וקבלו עד 8.3% אפריל במטבע בדיבידנדים
+			div.investment__splide.splide
+				div.investment__track.splide__track
+					ul.investment__list.splide__list(dir="ltr")
+						each stock in DataInvestment.RTL
+							li.investment__slide.splide__slide
+								+stock(stock)
+			button.investment__modal-open.button-accent(type="button" data-modal="modal-registration") הרשמה

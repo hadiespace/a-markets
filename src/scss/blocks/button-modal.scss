@@ -1,0 +1,33 @@
+.button-modal {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+	padding: 20px;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--color-alternate);
+	background-color: var(--color-accent);
+	transition: opacity .3s;
+
+	@media (hover: hover) {
+		&:hover,
+		&:focus {
+			opacity: .8;
+		}
+
+		&:active {
+			opacity: .6;
+		}
+	}
+
+	@media (hover: none) {
+		&:active {
+			opacity: .6;
+		}
+	}
+
+	@media (max-width: 599.98px) {
+		padding: 16px;
+	}
+}

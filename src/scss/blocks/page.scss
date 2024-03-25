@@ -1,0 +1,27 @@
+.page {
+	--top: 85px;
+	scroll-padding-top: var(--top);
+
+	@media (max-width: 599.98px) {
+		--top: 77px;
+		scroll-padding-top: var(--top);
+	}
+}
+
+.page__body {
+	display: flex;
+	flex-direction: column;
+	overflow-anchor: none;
+	margin: 0;
+	min-width: 320px;
+	min-height: 100dvh;
+	font-family: HelveticaNeue, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-feature-settings: "pnum" on, "lnum" on;
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--color-main);
+	background-color: var(--color-background);
+	overscroll-behavior: none;
+}

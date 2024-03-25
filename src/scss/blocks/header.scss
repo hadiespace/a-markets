@@ -1,0 +1,37 @@
+.header {
+	position: sticky;
+	top: 0;
+	z-index: 5;
+	border-bottom: 1px solid transparent;
+	padding: 20px 0 19px;
+	background-color: var(--color-alternate);
+	transition: border-color .3s;
+
+	&.sticky {
+		border-color: var(--color-border-main);
+	}
+
+	@media (max-width: 599.98px) {
+		padding: 16px 0 15px;
+	}
+}
+
+.header__container {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 32px;
+
+	@media (max-width: 767.98px) {
+		gap: 20px;
+	}
+
+	@media (max-width: 599.98px) {
+		gap: 16px;
+	}
+}
+
+.header__logo {
+	flex-shrink: 0;
+}
+.header__navigation {}

@@ -1,0 +1,26 @@
+mixin timer(parent)
+	if isLTR
+		div(class=`${parent}__timer timer` data-date="Jun 5 2024 04:00:00")
+			div.timer__items
+				div.timer__item.timer__days
+					span.timer__val 60
+					span.timer__text(data-timer="День, Дня, Дней")
+				div.timer__item.timer__hours
+					span.timer__val 60
+					span.timer__text(data-timer="Час, Часа, Часов")
+				div.timer__item.timer__minutes
+					span.timer__val 60
+					span.timer__text(data-timer="Минута, Минуты, Минут")
+
+	if isRTL
+		div(class=`${parent}__timer timer` data-date="May 1 2024 04:00:00")
+			div.timer__items
+				div.timer__item.timer__days
+					span.timer__val 60
+					span.timer__text(data-timer="יום, יום, ימים")
+				div.timer__item.timer__hours
+					span.timer__val 60
+					span.timer__text(data-timer="שעה, שעה, שעה")
+				div.timer__item.timer__minutes
+					span.timer__val 60
+					span.timer__text(data-timer="דקה, דקה, דקה")

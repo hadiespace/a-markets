@@ -1,0 +1,20 @@
+mixin stock(props)
+	- const { name, type, lastYear, logo, background } = props;
+
+	if isLTR
+		div.stock(style=`${background}`)
+			div.stock__wrap
+				h3.stock__company!= name
+				p.stock__type!= type
+				p.stock__percent Last year #[span!= lastYear]
+			div.stock__logo
+				img(src=logo width="50" height="50" alt=name loading="lazy")
+
+	if isRTL
+		div.stock(style=`${background}`)
+			div.stock__wrap
+				h3.stock__company!= name
+				p.stock__type!= type
+				p.stock__percent בשנה שעברה #[span!= lastYear]
+			div.stock__logo
+				img(src=logo width="50" height="50" alt=name loading="lazy")

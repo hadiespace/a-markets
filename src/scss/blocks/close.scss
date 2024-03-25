@@ -1,0 +1,48 @@
+.close {
+	position: relative;
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid var(--color-border-main);
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	transition: border-color .3s;
+
+	svg {
+		position: relative;
+		z-index: 2;
+		stroke: var(--color-main);
+	}
+
+	&--accent {
+		border: 1px solid var(--color-border-accent);
+	}
+
+	@media (hover: hover) {
+		&:hover,
+		&:focus {
+			border-color: var(--color-main);
+		}
+
+		&--accent {
+			&:hover,
+			&:focus {
+				border-color: var(--color-accent);
+			}
+		}
+	}
+
+	@media (hover: none) {
+		&:active {
+			border-color: var(--color-main);
+		}
+
+		&--accent {
+			&:active {
+				border-color: var(--color-accent);
+			}
+		}
+	}
+}
