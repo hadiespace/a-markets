@@ -4,7 +4,7 @@ if isLTR
 			h2.header-article__heading Успейте принять участие в&nbsp;конкурсе
 			p.header-article__sub-heading до&nbsp;конца конкурса осталось
 			+timer("header-article")
-			button.header-article__close.close.close--accent
+			button.header-article__close.close.close--accent(aria-label="Закрыть")
 				svg(width="24" height="24" aria-hidden="true")
 					use(xlink:href="img/sprite.svg#close")
 
@@ -14,6 +14,6 @@ if isRTL
 			h2.header-article__heading זמן להשתתף בתחרות
 			p.header-article__sub-heading עד לסיום התחרות
 			+timer("header-article")
-			button.header-article__close.close.close--accent
+			button.header-article__close.close.close--accent(aria-label="סגור")
 				svg(width="24" height="24" aria-hidden="true")
 					use(xlink:href="img/sprite.svg#close")

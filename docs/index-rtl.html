@@ -17,7 +17,8 @@
     <link rel="preload" href="fonts/helvetica-neue-400.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/helvetica-neue-500.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/helvetica-neue-700.woff2" as="font" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.min.css?_v=20240325212420">
+    <link rel="preload" fetchpriority="high" as="image" href="img/content/preview-decor.webp" type="image/webp">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
     <div id="path" data-path="." hidden></div>
@@ -32,7 +33,7 @@
                 <div class="timer__item timer__minutes"><span class="timer__val">60</span><span class="timer__text" data-timer="דקה, דקה, דקה"></span></div>
               </div>
             </div>
-        <button class="header-article__close close close--accent">
+        <button class="header-article__close close close--accent" aria-label="סגור">
           <svg width="24" height="24" aria-hidden="true">
             <use xlink:href="img/sprite.svg#close"></use>
           </svg>
@@ -61,7 +62,11 @@
               <p>וזכו בפרסים מגניבים מ-AMarkets!</p>
             </div><a class="preview__link button-accent" href="#investment">להשתתף</a>
           </div>
-          <div class="preview__decor" aria-hidden="true"><img src="img/content/preview-decor.svg" width="460" height="364" alt=""></div>
+          <div class="preview__decor" aria-hidden="true">
+            <picture>
+              <source srcset="img/content/preview-decor.webp" type="image/webp"><img src="img/content/preview-decor.png" width="460" height="364" alt="">
+            </picture>
+          </div>
         </div>
       </section>
       <section class="investment" id="investment" data-type="section">
@@ -162,7 +167,7 @@
     </main>
         <div class="modal" id="modal-registration">
           <div class="modal__content">
-            <button class="modal__close modal-close close" type="button" aria-label="Закрыть модальное окно">
+            <button class="modal__close modal-close close" type="button" aria-label="סגור חלון מודאלי">
               <svg width="24" height="24" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#close"></use>
               </svg>
@@ -193,7 +198,7 @@
         </div>
         <div class="modal" id="modal-success">
           <div class="modal__content">
-            <button class="modal__close modal-close close" type="button" aria-label="Закрыть модальное окно">
+            <button class="modal__close modal-close close" type="button" aria-label="סגור חלון מודאלי">
               <svg width="24" height="24" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#close"></use>
               </svg>
@@ -205,7 +210,7 @@
             </div>
           </div>
         </div>
-    <script src="js/bundle.min.js?_v=20240325212420"></script>
-    <script src="js/switcher.js?_v=20240325212420"></script>
+    <script src="js/bundle.min.js"></script>
+    <script src="js/switcher.js"></script>
   </body>
 </html>

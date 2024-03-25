@@ -1,11 +1,24 @@
 mixin modal(parent)
-	div(class="modal" id=`modal-${parent}`)
-		div(class="modal__content")
-			button(
-				class="modal__close modal-close close"
-				type="button"
-				aria-label="Закрыть модальное окно"
-			)
-				svg(width="24" height="24" aria-hidden="true")
-					use(xlink:href="img/sprite.svg#close")
-			block
+	if isLTR
+		div(class="modal" id=`modal-${parent}`)
+			div(class="modal__content")
+				button(
+					class="modal__close modal-close close"
+					type="button"
+					aria-label="Закрыть модальное окно"
+				)
+					svg(width="24" height="24" aria-hidden="true")
+						use(xlink:href="img/sprite.svg#close")
+				block
+
+	if isRTL
+		div(class="modal" id=`modal-${parent}`)
+			div(class="modal__content")
+				button(
+					class="modal__close modal-close close"
+					type="button"
+					aria-label="סגור חלון מודאלי"
+				)
+					svg(width="24" height="24" aria-hidden="true")
+						use(xlink:href="img/sprite.svg#close")
+				block

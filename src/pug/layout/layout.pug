@@ -19,6 +19,7 @@ html(class="page" lang=`${language}` dir=`${isRTL ? "rtl" : "ltr"}`)
 			link(rel="preload" href="fonts/helvetica-neue-400.woff2" as="font" crossorigin="anonymous")
 			link(rel="preload" href="fonts/helvetica-neue-500.woff2" as="font" crossorigin="anonymous")
 			link(rel="preload" href="fonts/helvetica-neue-700.woff2" as="font" crossorigin="anonymous")
+			link(rel="preload" fetchpriority="high" as="image" href="img/content/preview-decor.webp" type="image/webp")
 			link(rel="stylesheet" href="css/style.min.css")
 	body.page__body
 		div(id="path" data-path="." hidden)

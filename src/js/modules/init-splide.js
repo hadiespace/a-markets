@@ -20,6 +20,8 @@ export const initSplide = () => {
 					speed: 1,
 				},
 			}).mount({ AutoScroll });
+
+			investmentSplide.querySelectorAll('.splide__slide').forEach((slide) => slide.removeAttribute('role'));
 		}
 	});
 };

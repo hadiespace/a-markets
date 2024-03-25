@@ -9,7 +9,9 @@ if isLTR
 					p И&nbsp;выиграйте крутые призы от&nbsp;AMarkets!
 				a.preview__link.button-accent(href="#investment") Принять участие
 			div.preview__decor(aria-hidden="true")
-				img(src="img/content/preview-decor.svg" width="460" height="364" alt="")
+				picture
+					source(srcset="img/content/preview-decor.webp" type="image/webp")
+					img(src="img/content/preview-decor.png" width="460" height="364" alt="")
 
 if isRTL
 	section.preview(id="preview" data-type="section")
@@ -22,4 +24,6 @@ if isRTL
 					p וזכו בפרסים מגניבים מ-AMarkets!
 				a.preview__link.button-accent(href="#investment") להשתתף
 			div.preview__decor(aria-hidden="true")
-				img(src="img/content/preview-decor.svg" width="460" height="364" alt="")
+				picture
+					source(srcset="img/content/preview-decor.webp" type="image/webp")
+					img(src="img/content/preview-decor.png" width="460" height="364" alt="")
